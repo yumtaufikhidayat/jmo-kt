@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">JMO</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_login_desc">Silakan login untuk masuk aplikasi</string>
+    <string name="txt_login_failed_email">Login gagal. Email yang digunakan salah/tidak terdaftar. Silakan coba lagi.</string>
+    <string name="txt_login_failed_password">Login gagal. Password yang digunakan salah/tidak terdaftar. Silakan coba lagi.</string>
+    <string name="txt_login_success">Login berhasil. Silakan login untuk menikmati fitur-fitur JMO.</string>
+    <string name="txt_register">Register</string>
+    <string name="txt_register_desc">Silakan mendaftar untuk menggunakan aplikasi</string>
+    <string name="text_register_success">Pendaftaran akun berhasil. Yuk login dan nikmati pengalaman menggunakan JMO.</string>
+    <string name="txt_home">Beranda</string>
+    <string name="txt_news">Berita</string>
+    <string name="txt_digital_card">Kartu Digital</string>
+    <string name="txt_digital_card_under_development">%1$s sedang dalam tahap pengembangan</string>
+    <string name="txt_profile">Profil Saya</string>
+    <string name="txt_your_name">Nama Anda</string>
+    <string name="txt_name_ex">Mis: John Doe</string>
+    <string name="txt_your_email">Email Anda</string>
+    <string name="txt_email_ex">Mis: emailanda@domain.com</string>
+    <string name="txt_password">Kata Sandi</string>
+    <string name="txt_show_password">Tampilkan Kata Sandi</string>
+    <string name="txt_create_account">Buat Akun</string>
+    <string name="txt_have_account_login">Sudah Punya Akun? Masuk</string>
+    <string name="txt_close">Tutup</string>
+    <string name="txt_oke">Oke</string>
+</resources>

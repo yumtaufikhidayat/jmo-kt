@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_baseline_home"
+        android:title="@string/txt_home"/>
+
+    <item android:id="@+id/newsFragment"
+        android:icon="@drawable/ic_baseline_newspaper"
+        android:title="@string/txt_news"/>
+
+    <item android:id="@+id/digitalCardFragment"
+        android:icon="@drawable/ic_baseline_wallet"
+        android:title="@string/txt_digital_card"/>
+
+    <item android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_baseline_account"
+        android:title="@string/txt_profile"/>
+
+</menu>
