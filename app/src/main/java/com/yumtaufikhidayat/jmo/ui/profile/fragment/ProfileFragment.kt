@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.yumtaufikhidayat.jmo.R
 import com.yumtaufikhidayat.jmo.databinding.FragmentProfileBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,6 +25,11 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setToolbar()
+    }
+
+    private fun setToolbar() {
+        binding.toolbarProfile.tvToolbar.text = getString(R.string.txt_profile)
     }
 
     override fun onDestroyView() {

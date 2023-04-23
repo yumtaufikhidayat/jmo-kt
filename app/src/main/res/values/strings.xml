@@ -23,4 +23,11 @@
     <string name="txt_have_account_login">Sudah Punya Akun? Masuk</string>
     <string name="txt_close">Tutup</string>
     <string name="txt_oke">Oke</string>
+    <string name="txt_profile_name">Taufik Hidayat</string>
+    <string name="txt_profile_facilities">JHT, JKK, JKM, JKP, JP</string>
+    <string name="txt_card_identity">KTP/Paspor</string>
+    <string name="txt_card_identity_number">1234567891012131</string>
+    <string name="txt_phone">Nomor Hp</string>
+    <string name="txt_phone_number">085296257704</string>
+
 </resources>
