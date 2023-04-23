@@ -2,7 +2,7 @@ package com.yumtaufikhidayat.jmo.ui.home.viewmodel
 
 import androidx.lifecycle.ViewModel
 import com.yumtaufikhidayat.jmo.data.repository.JMORepository
-import com.yumtaufikhidayat.jmo.model.UserModel
+import com.yumtaufikhidayat.jmo.model.auth.UserModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject

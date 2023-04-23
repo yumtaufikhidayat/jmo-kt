@@ -29,5 +29,13 @@
     <string name="txt_card_identity_number">1234567891012131</string>
     <string name="txt_phone">Nomor Hp</string>
     <string name="txt_phone_number">085296257704</string>
-
+    <string name="txt_change_profile">Ubah Profil</string>
+    <string name="txt_your_digital_card">Kartu Digital Anda</string>
+    <string name="txt_term_condition">Syarat dan Ketentuan</string>
+    <string name="txt_privacy_policy">Kebijakan dan Privasi</string>
+    <string name="txt_about_app">Tentang Aplikasi</string>
+    <string name="txt_logout">Keluar</string>
+    <string name="txt_logout_desc">Apkah Anda yakin ingin logout?</string>
+    <string name="txt_yes">Ya</string>
+    <string name="txt_cancel">Batalkan</string>
 </resources>
