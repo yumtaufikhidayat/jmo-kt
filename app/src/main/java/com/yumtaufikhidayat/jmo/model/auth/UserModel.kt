@@ -1,4 +1,4 @@
-package com.yumtaufikhidayat.jmo.model
+package com.yumtaufikhidayat.jmo.model.auth
 
 data class UserModel(
     val name: String = "",
