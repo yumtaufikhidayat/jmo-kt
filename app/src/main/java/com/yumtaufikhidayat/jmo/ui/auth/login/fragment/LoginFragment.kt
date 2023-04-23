@@ -14,7 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.yumtaufikhidayat.jmo.R
 import com.yumtaufikhidayat.jmo.databinding.FragmentLoginBinding
-import com.yumtaufikhidayat.jmo.model.UserModel
+import com.yumtaufikhidayat.jmo.model.auth.UserModel
 import com.yumtaufikhidayat.jmo.ui.auth.login.viewmodel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
@@ -125,8 +125,6 @@ class LoginFragment : Fragment() {
                 }
                 else -> {
                     setPositiveButton(resources.getString(R.string.txt_oke)) { _, _ ->
-                        /*startActivity(Intent(requireContext(), MainActivity::class.java))
-                        requireActivity().finish()*/
                         findNavController().apply {
                             popBackStack(R.id.loginFragment, true)
                             navigate(R.id.homeFragment)

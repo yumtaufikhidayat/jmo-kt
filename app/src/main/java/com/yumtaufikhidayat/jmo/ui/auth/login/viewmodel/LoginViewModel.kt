@@ -3,7 +3,7 @@ package com.yumtaufikhidayat.jmo.ui.auth.login.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.yumtaufikhidayat.jmo.data.repository.JMORepository
-import com.yumtaufikhidayat.jmo.model.UserModel
+import com.yumtaufikhidayat.jmo.model.auth.UserModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch

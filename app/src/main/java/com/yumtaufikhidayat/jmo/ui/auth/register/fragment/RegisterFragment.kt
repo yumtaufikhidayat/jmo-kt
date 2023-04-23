@@ -14,7 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.yumtaufikhidayat.jmo.R
 import com.yumtaufikhidayat.jmo.databinding.FragmentRegisterBinding
-import com.yumtaufikhidayat.jmo.model.UserModel
+import com.yumtaufikhidayat.jmo.model.auth.UserModel
 import com.yumtaufikhidayat.jmo.ui.auth.register.viewmodel.RegisterViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
