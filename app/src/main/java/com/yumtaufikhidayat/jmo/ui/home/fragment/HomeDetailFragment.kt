@@ -46,7 +46,10 @@ class HomeDetailFragment : Fragment() {
             imgBack.apply {
                 isVisible = true
                 setOnClickListener {
-                    findNavController().navigate(R.id.homeFragment)
+                    findNavController().apply {
+                        popBackStack(R.id.homeDetailFragment, true)
+                        navigate(R.id.homeFragment)
+                    }
                 }
             }
         }

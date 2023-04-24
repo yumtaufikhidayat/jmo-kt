@@ -10,7 +10,7 @@
         android:title="@string/txt_news"/>
 
     <item android:id="@+id/digitalCardFragment"
-        android:icon="@drawable/ic_baseline_wallet"
+        android:icon="@drawable/ic_baseline_card"
         android:title="@string/txt_digital_card"/>
 
     <item android:id="@+id/profileFragment"

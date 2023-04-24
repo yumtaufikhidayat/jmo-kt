@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.JMO" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="colorPrimary">@color/matte_green_light</item>
     </style>
 
     <style name="Theme.JMO" parent="Base.Theme.JMO" />
@@ -18,14 +18,14 @@
     <style name="TextAppearance.BottomNavigationView.Inactive">
         <item name="android:textSize">12sp</item>
         <item name="fontFamily">sans-serif-medium</item>
-        <item name="colorPrimary">@color/purple_700</item>
+        <item name="colorPrimary">@color/matte_green_darker</item>
     </style>
 
     <style name="TextAppearance.BottomNavigationView.Active">
         <item name="android:textSize">12sp</item>
         <item name="fontFamily">sans-serif-medium</item>
-        <item name="colorPrimary">@color/purple_700</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/purple_500</item>
+        <item name="colorPrimary">@color/matte_green_darker</item>
+        <item name="colorPrimaryDark">@color/matte_green_darker</item>
+        <item name="colorAccent">@color/matte_green_dark</item>
     </style>
 </resources>
