@@ -35,7 +35,19 @@
     <string name="txt_privacy_policy">Kebijakan dan Privasi</string>
     <string name="txt_about_app">Tentang Aplikasi</string>
     <string name="txt_logout">Keluar</string>
-    <string name="txt_logout_desc">Apkah Anda yakin ingin logout?</string>
+    <string name="txt_logout_desc">Apakah Anda yakin ingin logout?</string>
     <string name="txt_yes">Ya</string>
     <string name="txt_cancel">Batalkan</string>
+    <string name="txt_eWallet">e-Wallet</string>
+    <string name="txt_service_program">Program Layanan</string>
+    <string name="txt_other_service">Layanan Lainnya</string>
+    <string name="txt_other_program">Program Lainnya</string>
+    <string name="txt_information">Informasi</string>
+    <string name="txt_old_days_guarantee">Jaminan Hari Tua</string>
+    <string name="txt_accidental_guarantee">Jaminan Kecelakaan Kerja</string>
+    <string name="txt_death_guarantee">Jaminan Kematian</string>
+    <string name="txt_retirement_guarantee">Jaminan Pensiun</string>
+    <string name="txt_loss_of_a_job_guarantee">Jaminan Kehilangan Pekerjaan</string>
+    <string name="txt_guarantee_desc">Anda sudah terdaftar di layanan ini</string>
+
 </resources>

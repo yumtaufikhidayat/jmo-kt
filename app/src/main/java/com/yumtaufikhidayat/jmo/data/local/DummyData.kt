@@ -2,12 +2,38 @@ package com.yumtaufikhidayat.jmo.data.local
 
 import android.content.Context
 import com.yumtaufikhidayat.jmo.R
+import com.yumtaufikhidayat.jmo.model.home.ServiceProgram
 import com.yumtaufikhidayat.jmo.model.profile.Profile
-import dagger.hilt.android.qualifiers.ApplicationContext
 
 object DummyData {
 
-    fun provideListOfProfileMenu(@ApplicationContext context: Context): List<Profile> {
+    fun provideListOfServiceProgram(context: Context): List<ServiceProgram> {
+        return mutableListOf(
+            ServiceProgram(
+                serviceProgramIcon = R.drawable.ic_baseline_old_day_guarantee,
+                serviceProgramTitle = context.getString(R.string.txt_old_days_guarantee)
+            ),
+            ServiceProgram(
+                serviceProgramIcon = R.drawable.ic_baseline_accident_guarantee,
+                serviceProgramTitle = context.getString(R.string.txt_accidental_guarantee)
+            ),
+            ServiceProgram(
+                serviceProgramIcon = R.drawable.ic_baseline_death_guarantee,
+                serviceProgramTitle = context.getString(R.string.txt_death_guarantee)
+            ),
+            ServiceProgram(
+                serviceProgramIcon = R.drawable.ic_baseline_retirement,
+                serviceProgramTitle = context.getString(R.string.txt_retirement_guarantee)
+            ),
+            ServiceProgram(
+                serviceProgramIcon = R.drawable.ic_baseline_lost_job_guarantee,
+                serviceProgramTitle = context.getString(R.string.txt_loss_of_a_job_guarantee)
+            ),
+
+        )
+    }
+
+    fun provideListOfProfileMenu(context: Context): List<Profile> {
         return mutableListOf(
             Profile(
                 profileMenuName = context.getString(R.string.txt_change_profile),
