@@ -29,7 +29,7 @@
             android:id="@+id/tvServiceProgramTitle"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginHorizontal="16dp"
+            android:layout_marginHorizontal="8dp"
             tools:text="@string/txt_old_days_guarantee"
             android:textSize="16sp"
             android:textColor="@color/black"

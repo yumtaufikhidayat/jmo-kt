@@ -49,7 +49,9 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                 }
-                R.id.loginFragment, R.id.registerFragment -> showHideBottomNavigation(false)
+                R.id.loginFragment,
+                R.id.registerFragment,
+                R.id.homeDetailFragment -> showHideBottomNavigation(false)
                 else -> showHideBottomNavigation(true)
             }
         }

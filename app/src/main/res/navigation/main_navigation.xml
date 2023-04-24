@@ -34,4 +34,9 @@
         android:name="com.yumtaufikhidayat.jmo.ui.profile.fragment.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/homeDetailFragment"
+        android:name="com.yumtaufikhidayat.jmo.ui.home.fragment.HomeDetailFragment"
+        android:label="fragment_home_detail"
+        tools:layout="@layout/fragment_home_detail" />
 </navigation>
