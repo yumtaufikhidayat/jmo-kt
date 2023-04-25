@@ -3,8 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/jmo_navigation"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/splashScreenFragment">
 
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.yumtaufikhidayat.jmo.ui.splashscreen.fragment.SplashScreenFragment"
+        android:label="fragment_splashscreen"
+        tools:layout="@layout/fragment_splashscreen" />
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.yumtaufikhidayat.jmo.ui.auth.login.fragment.LoginFragment"
@@ -21,6 +26,11 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
+        android:id="@+id/homeDetailFragment"
+        android:name="com.yumtaufikhidayat.jmo.ui.home.fragment.HomeDetailFragment"
+        android:label="fragment_home_detail"
+        tools:layout="@layout/fragment_home_detail" />
+    <fragment
         android:id="@+id/newsFragment"
         android:name="com.yumtaufikhidayat.jmo.ui.news.fragment.NewsFragment"
         android:label="fragment_news"
@@ -34,9 +44,4 @@
         android:name="com.yumtaufikhidayat.jmo.ui.profile.fragment.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
-    <fragment
-        android:id="@+id/homeDetailFragment"
-        android:name="com.yumtaufikhidayat.jmo.ui.home.fragment.HomeDetailFragment"
-        android:label="fragment_home_detail"
-        tools:layout="@layout/fragment_home_detail" />
 </navigation>

@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,7 +15,6 @@ import com.yumtaufikhidayat.jmo.ui.home.adapter.OtherServiceAdapter
 import com.yumtaufikhidayat.jmo.ui.home.adapter.ServiceProgramAdapter
 import com.yumtaufikhidayat.jmo.ui.home.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
@@ -38,25 +36,11 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        checkIsLogin()
         initServiceProgramAdapter()
         initOtherProgramAdapter()
         setServiceProgramData()
         setOtherServiceProgramData()
         setServiceProgramListener()
-    }
-
-    private fun checkIsLogin() {
-        lifecycleScope.launch {
-            viewModel.getUser().collect {
-                if (!it.isLogin) {
-                    findNavController().apply {
-                        popBackStack(R.id.homeFragment, true)
-                        navigate(R.id.loginFragment)
-                    }
-                }
-            }
-        }
     }
 
     private fun initServiceProgramAdapter() {
