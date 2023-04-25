@@ -50,5 +50,13 @@
     <string name="txt_retirement_guarantee">Jaminan Pensiun</string>
     <string name="txt_loss_of_a_job_guarantee">Jaminan Kehilangan Pekerjaan</string>
     <string name="txt_guarantee_desc">Anda sudah terdaftar di layanan ini</string>
-
+    <string name="txt_program_info">Info Program</string>
+    <string name="txt_auto_debit_pay">Bayar/Autodebit</string>
+    <string name="txt_register_bpu">Daftar BPU</string>
+    <string name="txt_update_data">Pengkinian Data</string>
+    <string name="txt_branch_office">Kantor Cabang</string>
+    <string name="txt_service_partner">Mitra Layanan</string>
+    <string name="txt_complaint">Pengaduan</string>
+    <string name="txt_help">Bantuan</string>
+    <string name="txt_other_menu">Menu Lainnya</string>
 </resources>

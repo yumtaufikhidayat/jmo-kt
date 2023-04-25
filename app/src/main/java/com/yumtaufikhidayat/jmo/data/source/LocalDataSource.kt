@@ -8,5 +8,8 @@ import javax.inject.Inject
 
 class LocalDataSource @Inject constructor() {
     fun listOfServiceProgram(context: Context): List<ServiceProgram> = DummyData.provideListOfServiceProgram(context)
+
+    fun listOfOtherServices(context: Context): List<ServiceProgram> = DummyData.provideListOfOtherServices(context)
+
     fun listOfProfileMenu(context: Context): List<Profile> = DummyData.provideListOfProfileMenu(context)
 }

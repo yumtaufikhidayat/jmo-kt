@@ -14,4 +14,6 @@ class HomeViewModel @Inject constructor(private val repository: JMORepository) :
     fun getUser(): Flow<UserModel> = repository.getUser()
 
     fun listOfServiceProgram(context: Context): List<ServiceProgram> = repository.listOfServiceProgram(context)
+
+    fun listOfOtherService(context: Context): List<ServiceProgram> = repository.listOfOtherService(context)
 }

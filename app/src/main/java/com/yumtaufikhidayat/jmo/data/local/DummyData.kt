@@ -28,8 +28,48 @@ object DummyData {
             ServiceProgram(
                 serviceProgramIcon = R.drawable.ic_baseline_lost_job_guarantee,
                 serviceProgramTitle = context.getString(R.string.txt_loss_of_a_job_guarantee)
-            ),
+            )
+        )
+    }
 
+    fun provideListOfOtherServices(context: Context): List<ServiceProgram> {
+        return mutableListOf(
+            ServiceProgram(
+                serviceProgramIcon = R.drawable.ic_baseline_info,
+                serviceProgramTitle = context.getString(R.string.txt_program_info)
+            ),
+            ServiceProgram(
+                serviceProgramIcon = R.drawable.ic_baseline_auto_debit,
+                serviceProgramTitle = context.getString(R.string.txt_auto_debit_pay)
+            ),
+            ServiceProgram(
+                serviceProgramIcon = R.drawable.ic_baseline_account,
+                serviceProgramTitle = context.getString(R.string.txt_register_bpu)
+            ),
+            ServiceProgram(
+                serviceProgramIcon = R.drawable.ic_baseline_updates,
+                serviceProgramTitle = context.getString(R.string.txt_update_data)
+            ),
+            ServiceProgram(
+                serviceProgramIcon = R.drawable.ic_baseline_branch_office,
+                serviceProgramTitle = context.getString(R.string.txt_branch_office)
+            ),
+            ServiceProgram(
+                serviceProgramIcon = R.drawable.ic_baseline_partner,
+                serviceProgramTitle = context.getString(R.string.txt_service_partner)
+            ),
+            ServiceProgram(
+                serviceProgramIcon = R.drawable.ic_baseline_compliant,
+                serviceProgramTitle = context.getString(R.string.txt_complaint)
+            ),
+            ServiceProgram(
+                serviceProgramIcon = R.drawable.ic_baseline_help,
+                serviceProgramTitle = context.getString(R.string.txt_help)
+            ),
+            ServiceProgram(
+                serviceProgramIcon = R.drawable.ic_baseline_other_menu,
+                serviceProgramTitle = context.getString(R.string.txt_other_menu)
+            )
         )
     }
 

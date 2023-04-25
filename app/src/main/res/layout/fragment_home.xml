@@ -106,6 +106,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            tools:listitem="@layout/item_other_service"
+            tools:itemCount="4"
+            app:spanCount="4"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintTop_toBottomOf="@id/tvOtherService"
             app:layout_constraintStart_toStartOf="@id/tvServiceProgram"
             app:layout_constraintEnd_toEndOf="@id/tvServiceProgram"/>

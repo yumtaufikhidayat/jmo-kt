@@ -23,5 +23,7 @@ class JMORepository @Inject constructor(
 
     fun listOfServiceProgram(context: Context): List<ServiceProgram> = localDataSource.listOfServiceProgram(context)
 
+    fun listOfOtherService(context: Context): List<ServiceProgram> = localDataSource.listOfOtherServices(context)
+
     fun listOfProfileMenu(context: Context): List<Profile> = localDataSource.listOfProfileMenu(context)
 }
