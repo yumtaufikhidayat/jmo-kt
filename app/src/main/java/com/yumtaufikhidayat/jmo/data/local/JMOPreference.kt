@@ -30,12 +30,7 @@ class JMOPreference @Inject constructor(private val dataStore: DataStore<Prefere
 
     suspend fun logoutUser() {
         dataStore.edit { preferences ->
-            preferences.apply {
-                remove(NAME_KEY)
-                remove(EMAIL_KEY)
-                remove(PASSWORD_KEY)
-                remove(STATE_KEY)
-            }
+            preferences.remove(STATE_KEY)
             preferences[STATE_KEY] = false
         }
     }
