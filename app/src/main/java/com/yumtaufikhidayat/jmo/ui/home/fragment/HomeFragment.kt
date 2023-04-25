@@ -24,6 +24,7 @@ import com.yumtaufikhidayat.jmo.ui.home.adapter.ImageSliderAdapter
 import com.yumtaufikhidayat.jmo.ui.home.adapter.OtherServiceAdapter
 import com.yumtaufikhidayat.jmo.ui.home.adapter.ServiceProgramAdapter
 import com.yumtaufikhidayat.jmo.ui.home.viewmodel.HomeViewModel
+import com.yumtaufikhidayat.jmo.utils.Common
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -32,7 +33,6 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel by viewModels<HomeViewModel>()
-    private val delayTime = 2000L
     private var doubleBackToExitPressedOnce = false
     private val serviceProgramAdapter by lazy { ServiceProgramAdapter() }
     private val otherServiceAdapter by lazy { OtherServiceAdapter() }
@@ -54,7 +54,7 @@ class HomeFragment : Fragment() {
             Handler(Looper.getMainLooper())
                 .postDelayed({
                     doubleBackToExitPressedOnce = false
-                }, delayTime)
+                }, Common.DELAY_TIME)
         }
     }
 
@@ -108,7 +108,7 @@ class HomeFragment : Fragment() {
                 if (index == dotsIndicator?.size) index = 0
                 binding.vpInformation.currentItem = index
                 index++
-                handler?.postDelayed(this, delayTime)
+                handler?.postDelayed(this, Common.DELAY_TIME)
             }
         }
     }

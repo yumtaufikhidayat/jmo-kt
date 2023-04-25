@@ -16,6 +16,7 @@ import com.yumtaufikhidayat.jmo.R
 import com.yumtaufikhidayat.jmo.databinding.FragmentLoginBinding
 import com.yumtaufikhidayat.jmo.model.auth.UserModel
 import com.yumtaufikhidayat.jmo.ui.auth.login.viewmodel.LoginViewModel
+import com.yumtaufikhidayat.jmo.utils.Common
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -71,7 +72,7 @@ class LoginFragment : Fragment() {
                         lifecycleScope.launch {
                             viewModel.loginUser()
                             showLoading(true)
-                            delay(5000)
+                            delay(Common.DELAY_TIME)
                             showDialog(getString(R.string.txt_login_success))
                             showLoading(false)
                         }

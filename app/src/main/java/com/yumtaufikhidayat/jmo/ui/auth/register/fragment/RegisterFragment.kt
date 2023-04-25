@@ -16,6 +16,7 @@ import com.yumtaufikhidayat.jmo.R
 import com.yumtaufikhidayat.jmo.databinding.FragmentRegisterBinding
 import com.yumtaufikhidayat.jmo.model.auth.UserModel
 import com.yumtaufikhidayat.jmo.ui.auth.register.viewmodel.RegisterViewModel
+import com.yumtaufikhidayat.jmo.utils.Common
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -58,7 +59,7 @@ class RegisterFragment : Fragment() {
                 lifecycleScope.launch {
                     viewModel.registerUser(userModel)
                     showLoading(true)
-                    delay(5000)
+                    delay(Common.DELAY_TIME)
                     showDialog(getString(R.string.text_register_success))
                     showLoading(false)
                 }

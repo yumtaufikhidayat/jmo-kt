@@ -4,6 +4,7 @@ import java.util.regex.Pattern
 
 object Common {
     const val USER_PREFERENCES = "user_preferences"
+    const val DELAY_TIME = 2000L
     fun isValidEmailId(email: String): Boolean {
         return Pattern.compile(
             "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]|[\\w-]{2,}))@"
