@@ -4,6 +4,7 @@ import android.content.Context
 import com.yumtaufikhidayat.jmo.data.local.JMOPreference
 import com.yumtaufikhidayat.jmo.data.source.LocalDataSource
 import com.yumtaufikhidayat.jmo.model.auth.UserModel
+import com.yumtaufikhidayat.jmo.model.home.ImageSlider
 import com.yumtaufikhidayat.jmo.model.home.ServiceProgram
 import com.yumtaufikhidayat.jmo.model.profile.Profile
 import kotlinx.coroutines.flow.Flow
@@ -24,6 +25,8 @@ class JMORepository @Inject constructor(
     fun listOfServiceProgram(context: Context): List<ServiceProgram> = localDataSource.listOfServiceProgram(context)
 
     fun listOfOtherService(context: Context): List<ServiceProgram> = localDataSource.listOfOtherServices(context)
+
+    fun listOfImageSlider(): List<ImageSlider> = localDataSource.listOfImageSlider()
 
     fun listOfProfileMenu(context: Context): List<Profile> = localDataSource.listOfProfileMenu(context)
 }

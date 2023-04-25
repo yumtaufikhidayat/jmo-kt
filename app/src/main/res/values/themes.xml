@@ -28,4 +28,8 @@
         <item name="colorPrimaryDark">@color/matte_green_darker</item>
         <item name="colorAccent">@color/matte_green_dark</item>
     </style>
+
+    <style name="ShapeAppearanceOverlay.App.Corner" parent="">
+        <item name="cornerSize">5%</item>
+    </style>
 </resources>

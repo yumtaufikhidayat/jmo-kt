@@ -2,6 +2,7 @@ package com.yumtaufikhidayat.jmo.data.local
 
 import android.content.Context
 import com.yumtaufikhidayat.jmo.R
+import com.yumtaufikhidayat.jmo.model.home.ImageSlider
 import com.yumtaufikhidayat.jmo.model.home.ServiceProgram
 import com.yumtaufikhidayat.jmo.model.profile.Profile
 
@@ -70,6 +71,14 @@ object DummyData {
                 serviceProgramIcon = R.drawable.ic_baseline_other_menu,
                 serviceProgramTitle = context.getString(R.string.txt_other_menu)
             )
+        )
+    }
+
+    fun provideImageSlider(): List<ImageSlider> {
+        return mutableListOf(
+            ImageSlider("https://come2indonesia.com/wp-content/uploads/2020/07/Nature_01_come2indonesia_Indonesia.jpg"),
+            ImageSlider("https://wallpaper-nature.com/wp-content/uploads/2018/09/Destinasi-Wisata-Gunung-Indonesia-Paling-Mempesona.png"),
+            ImageSlider("https://w0.peakpx.com/wallpaper/859/129/HD-wallpaper-volcano-in-indonesia-nature-volcano-clouds-indonesia.jpg")
         )
     }
 
