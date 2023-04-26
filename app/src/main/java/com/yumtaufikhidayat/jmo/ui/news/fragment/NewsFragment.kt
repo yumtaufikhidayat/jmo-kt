@@ -125,6 +125,7 @@ class NewsFragment : Fragment() {
         binding.rvOtherNews.apply {
             layoutManager = GridLayoutManager(requireContext(), 2)
             setHasFixedSize(true)
+            isNestedScrollingEnabled = false
             adapter = newsAdapter
         }
     }
