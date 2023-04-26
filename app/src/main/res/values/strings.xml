@@ -60,4 +60,10 @@
     <string name="txt_complaint">Pengaduan</string>
     <string name="txt_help">Bantuan</string>
     <string name="txt_other_menu">Menu Lainnya</string>
+    <string name="txt_headline_news">Berita Terbaru</string>
+    <string name="txt_other_news">Berita Lainnya</string>
+    <string name="txt_oops">Oops! Terdapat kesalahan…</string>
+    <string name="txt_retry">Coba Lagi</string>
+    <string name="txt_result_could_not_loaded">Hasil gagal dimuat</string>
+    <string name="txt_results_not_found">Hasil tidak ditemukan</string>
 </resources>

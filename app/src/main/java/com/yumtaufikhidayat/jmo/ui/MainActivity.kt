@@ -52,7 +52,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.splashScreenFragment,
                 R.id.loginFragment,
                 R.id.registerFragment,
-                R.id.homeDetailFragment -> showHideBottomNavigation(false)
+                R.id.homeDetailFragment,
+                R.id.newsDetailFragment -> showHideBottomNavigation(false)
                 else -> showHideBottomNavigation(true)
             }
         }

@@ -9,7 +9,6 @@
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imgSlider"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Corner"
-        app:srcCompat="@drawable/ic_launcher_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"/>

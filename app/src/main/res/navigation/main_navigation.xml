@@ -36,6 +36,11 @@
         android:label="fragment_news"
         tools:layout="@layout/fragment_news" />
     <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.yumtaufikhidayat.jmo.ui.news.fragment.NewsDetailFragment"
+        android:label="fragment_news_detail"
+        tools:layout="@layout/fragment_news_detail" />
+    <fragment
         android:id="@+id/digitalCardFragment"
         android:name="com.yumtaufikhidayat.jmo.ui.card.DigitalCardFragment"
         android:label="FragmentDigitalCard" />

@@ -5,10 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.yumtaufikhidayat.jmo.R
 import com.yumtaufikhidayat.jmo.databinding.ItemSlideBinding
 import com.yumtaufikhidayat.jmo.model.home.ImageSlider
+import com.yumtaufikhidayat.jmo.utils.Common.loadImage
 
 class ImageSliderAdapter : ListAdapter<ImageSlider, ImageSliderAdapter.ViewHolder>(imageSliderDiffCallback) {
 
@@ -29,10 +28,7 @@ class ImageSliderAdapter : ListAdapter<ImageSlider, ImageSliderAdapter.ViewHolde
     inner class ViewHolder(private val binding: ItemSlideBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(data: ImageSlider) {
-            Glide.with(itemView.context)
-                .load(data.imageUrl)
-                .placeholder(R.drawable.ic_launcher_background)
-                .into(binding.imgSlider)
+            binding.imgSlider.loadImage(data.imageUrl)
         }
     }
 

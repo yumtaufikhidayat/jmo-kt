@@ -3,6 +3,7 @@ package com.yumtaufikhidayat.jmo.data.repository
 import android.content.Context
 import com.yumtaufikhidayat.jmo.data.local.JMOPreference
 import com.yumtaufikhidayat.jmo.data.source.LocalDataSource
+import com.yumtaufikhidayat.jmo.data.source.RemoteDataSource
 import com.yumtaufikhidayat.jmo.model.auth.UserModel
 import com.yumtaufikhidayat.jmo.model.home.ImageSlider
 import com.yumtaufikhidayat.jmo.model.home.ServiceProgram
@@ -12,7 +13,8 @@ import javax.inject.Inject
 
 class JMORepository @Inject constructor(
     private val jmoPreference: JMOPreference,
-    private val localDataSource: LocalDataSource
+    private val localDataSource: LocalDataSource,
+    private val remoteDataSource: RemoteDataSource
 ) {
     fun getUser(): Flow<UserModel> = jmoPreference.getUser()
 
@@ -29,4 +31,8 @@ class JMORepository @Inject constructor(
     fun listOfImageSlider(): List<ImageSlider> = localDataSource.listOfImageSlider()
 
     fun listOfProfileMenu(context: Context): List<Profile> = localDataSource.listOfProfileMenu(context)
+
+    fun getHeadlineNews(sources: String) = remoteDataSource.getHeadlineNews(sources)
+
+    fun getEverythingNews() = remoteDataSource.getEverythingNews()
 }
