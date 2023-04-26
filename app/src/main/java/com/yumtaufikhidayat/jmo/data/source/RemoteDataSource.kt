@@ -3,6 +3,7 @@ package com.yumtaufikhidayat.jmo.data.source
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.liveData
+import com.yumtaufikhidayat.jmo.BuildConfig
 import com.yumtaufikhidayat.jmo.data.BaseApiResponse
 import com.yumtaufikhidayat.jmo.data.NetworkResult
 import com.yumtaufikhidayat.jmo.data.paging.HeadlineNewsPagingSource
@@ -16,7 +17,7 @@ import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
 class RemoteDataSource @Inject constructor(private val apiService: ApiService): BaseApiResponse() {
-    private val apiKey = ""
+    private val apiKey = BuildConfig.API_KEY
 
     fun getHeadlineNews(sources: String): Flow<NetworkResult<NewsResponse>> {
         return flow {

@@ -31,7 +31,7 @@ class HeadlineNewsPagingSource(
 
             LoadResult.Page(
                 data = responseData,
-                prevKey = if (currentPage == Common.STARTING_PAGE_INDEX) null else - 1,
+                prevKey = if (currentPage == Common.STARTING_PAGE_INDEX) null else currentPage,
                 nextKey = if (data?.isEmpty() == true) null else currentPage + 1
             )
         } catch (httpEx: HttpException) {

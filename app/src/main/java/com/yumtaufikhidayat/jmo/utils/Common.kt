@@ -18,7 +18,7 @@ object Common {
     const val DELAY_TIME = 2000L
     const val STARTING_PAGE_INDEX = 1
     const val PAGE_SIZE = 10
-    private const val EEE_D_MMM_YYYY_FORMAT = "EEE, d MMM yyyy"
+    private const val D_MMM_YYYY_FORMAT = "d MMM yyyy"
     const val DATE_FORMAT_1 = "yyyy-MM-dd'T'HH:mm:ss'Z'"
     const val DATE_FORMAT_2 = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
 
@@ -65,7 +65,7 @@ object Common {
         if (this.isNotEmpty()) {
             formatParser = formatter.parse(this) ?: Date()
         }
-        val newOutputFormat = SimpleDateFormat(EEE_D_MMM_YYYY_FORMAT, Locale.getDefault())
+        val newOutputFormat = SimpleDateFormat(D_MMM_YYYY_FORMAT, Locale.getDefault())
         return newOutputFormat.format(formatParser)
     }
 }

@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -61,13 +60,7 @@ class NewsFragment : Fragment() {
                         tvPublishedAt.text = articles?.publishedAt?.convertDate(Common.DATE_FORMAT_2).orEmpty()
                         tvNewsTitle.text = articles?.title.orEmpty()
                         cardHeadlineNews.setOnClickListener {
-                            val bundle = bundleOf(
-                                NewsDetailFragment.EXTRA_NEWS_DETAIL to articles?.url.orEmpty()
-                            )
-                            findNavController().apply {
-                                popBackStack(R.id.newsFragment, true)
-                                navigate(R.id.newsDetailFragment, bundle)
-                            }
+                            navigateToNewsDetail(articles?.url.orEmpty())
                         }
                     }
                     is NetworkResult.Error -> {}
@@ -80,7 +73,7 @@ class NewsFragment : Fragment() {
         binding.apply {
             lifecycleScope.launch {
                 newsAdapter = NewsAdapter {
-                    Toast.makeText(requireContext(), "${it.title}", Toast.LENGTH_SHORT).show()
+                    navigateToNewsDetail(it.url)
                 }
 
                 newsViewModel.getEverythingNews().observe(viewLifecycleOwner) {
@@ -115,6 +108,16 @@ class NewsFragment : Fragment() {
                 header = LoadMoreAdapter { newsAdapter?.retry() },
                 footer = LoadMoreAdapter { newsAdapter?.retry() }
             )
+        }
+    }
+
+    private fun navigateToNewsDetail(newsUrl: String?) {
+        val bundle = bundleOf(
+            NewsDetailFragment.EXTRA_NEWS_DETAIL to newsUrl.orEmpty()
+        )
+        findNavController().apply {
+            popBackStack(R.id.newsFragment, true)
+            navigate(R.id.newsDetailFragment, bundle)
         }
     }
 
