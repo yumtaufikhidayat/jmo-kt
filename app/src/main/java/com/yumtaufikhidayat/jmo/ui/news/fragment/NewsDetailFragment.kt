@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebViewClient
+import androidx.activity.OnBackPressedCallback
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -20,6 +21,12 @@ class NewsDetailFragment : Fragment() {
 
     private var newsUrl = ""
 
+    private val backPressedCallback: OnBackPressedCallback = object : OnBackPressedCallback(true) {
+        override fun handleOnBackPressed() {
+            navigateBackToNews()
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -31,6 +38,10 @@ class NewsDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
+            backPressedCallback
+        )
         getBundleData()
         setToolbar()
         setNewsDetail()
@@ -44,10 +55,7 @@ class NewsDetailFragment : Fragment() {
         binding.toolbarNewsDetail.apply {
             imgBack.isVisible = true
             imgBack.setOnClickListener {
-                findNavController().apply {
-                    popBackStack(R.id.newsDetailFragment, true)
-                    navigate(R.id.newsFragment)
-                }
+                navigateBackToNews()
             }
             tvToolbar.text = getString(R.string.txt_news)
         }
@@ -64,6 +72,13 @@ class NewsDetailFragment : Fragment() {
             scrollBarStyle = View.SCROLLBARS_INSIDE_OVERLAY
             webViewClient = WebViewClient()
             loadUrl(newsUrl)
+        }
+    }
+
+    private fun navigateBackToNews() {
+        findNavController().apply {
+            popBackStack(R.id.newsDetailFragment, true)
+            navigate(R.id.newsFragment)
         }
     }
 
