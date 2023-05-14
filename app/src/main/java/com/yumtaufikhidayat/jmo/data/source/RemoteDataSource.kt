@@ -2,7 +2,6 @@ package com.yumtaufikhidayat.jmo.data.source
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
-import androidx.paging.liveData
 import com.yumtaufikhidayat.jmo.BuildConfig
 import com.yumtaufikhidayat.jmo.data.BaseApiResponse
 import com.yumtaufikhidayat.jmo.data.NetworkResult
@@ -27,10 +26,9 @@ class RemoteDataSource @Inject constructor(private val apiService: ApiService): 
 
     fun getEverythingNews() = Pager(
         PagingConfig(
-            pageSize = Common.STARTING_PAGE_INDEX,
-            maxSize = Common.PAGE_SIZE,
+            pageSize = Common.PAGE_SIZE,
             enablePlaceholders = false
         ), pagingSourceFactory = {
             HeadlineNewsPagingSource(apiKey, apiService)
-        }).liveData
+        }).flow
 }
