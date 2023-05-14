@@ -26,13 +26,16 @@ class HeadlineNewsPagingSource(
         return try {
             val response = apiService.getEverythingNews(query, searchIn, currentPage, Common.PAGE_SIZE, apiKey)
             val data = response.body()?.newsArticles
-            val responseData = mutableListOf<NewsArticle>()
-            if (data != null) responseData.addAll(data)
+            val nextKey = if (data.isNullOrEmpty()) {
+                null
+            } else {
+                currentPage + (params.loadSize / Common.LOAD_MAX_PER_PAGE)
+            }
 
             LoadResult.Page(
-                data = responseData,
+                data = data ?: emptyList(),
                 prevKey = if (currentPage == Common.STARTING_PAGE_INDEX) null else currentPage,
-                nextKey = if (data?.isEmpty() == true) null else currentPage + 1
+                nextKey = nextKey?.plus(1)
             )
         } catch (httpEx: HttpException) {
             LoadResult.Error(httpEx)
