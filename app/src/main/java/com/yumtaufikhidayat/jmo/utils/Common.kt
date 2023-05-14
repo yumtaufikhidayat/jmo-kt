@@ -17,7 +17,8 @@ object Common {
     const val USER_PREFERENCES = "user_preferences"
     const val DELAY_TIME = 2000L
     const val STARTING_PAGE_INDEX = 1
-    const val PAGE_SIZE = 10
+    const val PAGE_SIZE = 5
+    const val LOAD_MAX_PER_PAGE = 25
     private const val D_MMM_YYYY_FORMAT = "d MMM yyyy"
     const val DATE_FORMAT_1 = "yyyy-MM-dd'T'HH:mm:ss'Z'"
     const val DATE_FORMAT_2 = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
