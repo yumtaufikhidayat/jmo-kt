@@ -71,36 +71,36 @@ class NewsFragment : Fragment() {
 
     private fun setNewsData() {
         binding.apply {
-            lifecycleScope.launch {
-                newsAdapter = NewsAdapter {
-                    navigateToNewsDetail(it.url)
-                }
+            newsAdapter = NewsAdapter {
+                navigateToNewsDetail(it.url)
+            }
 
-                newsViewModel.getEverythingNews().observe(viewLifecycleOwner) {
+            lifecycleScope.launch {
+                newsViewModel.getEverythingNews().collect {
                     newsAdapter?.submitData(viewLifecycleOwner.lifecycle, it)
                 }
+            }
 
-                newsAdapter?.apply {
-                    addLoadStateListener { loadState ->
-                        pbLoading.isVisible = loadState.source.refresh is LoadState.Loading
-                        rvOtherNews.isVisible = loadState.source.refresh is LoadState.NotLoading
-                        btnRetry.isVisible = loadState.source.refresh is LoadState.Error
-                        tvError.isVisible = loadState.source.refresh is LoadState.Error
+            newsAdapter?.apply {
+                addLoadStateListener { loadState ->
+                    pbLoading.isVisible = loadState.source.refresh is LoadState.Loading
+                    rvOtherNews.isVisible = loadState.source.refresh is LoadState.NotLoading
+                    btnRetry.isVisible = loadState.source.refresh is LoadState.Error
+                    tvError.isVisible = loadState.source.refresh is LoadState.Error
 
-                        if (loadState.source.refresh is LoadState.NotLoading
-                            && loadState.append.endOfPaginationReached
-                            && itemCount < 1
-                        ) {
-                            rvOtherNews.isVisible = false
-                            tvEmpty.isVisible = true
-                        } else {
-                            tvEmpty.isVisible = false
-                        }
+                    if (loadState.source.refresh is LoadState.NotLoading
+                        && loadState.append.endOfPaginationReached
+                        && itemCount < 1
+                    ) {
+                        rvOtherNews.isVisible = false
+                        tvEmpty.isVisible = true
+                    } else {
+                        tvEmpty.isVisible = false
                     }
+                }
 
-                    btnRetry.setOnClickListener {
-                        this.retry()
-                    }
+                btnRetry.setOnClickListener {
+                    newsAdapter?.retry()
                 }
             }
 
