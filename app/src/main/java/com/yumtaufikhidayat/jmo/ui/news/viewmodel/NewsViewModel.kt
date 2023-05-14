@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.paging.cachedIn
 import com.yumtaufikhidayat.jmo.data.NetworkResult
 import com.yumtaufikhidayat.jmo.data.repository.JMORepository
 import com.yumtaufikhidayat.jmo.model.news.NewsResponse
@@ -22,5 +23,5 @@ class NewsViewModel @Inject constructor(private val repository: JMORepository): 
         }
     }
 
-    fun getEverythingNews() = repository.getEverythingNews()
+    fun getEverythingNews() = repository.getEverythingNews().cachedIn(viewModelScope)
 }
