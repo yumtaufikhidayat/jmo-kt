@@ -20,11 +20,9 @@ class NewsAdapter(private val onItemClickListener: (NewsArticle) -> Unit): Pagin
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val data = getItem(position)
         if (data != null) holder.bind(data)
-        holder.setIsRecyclable(false)
     }
 
-    inner class ViewHolder(private val binding: ItemNewsBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(private val binding: ItemNewsBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(data: NewsArticle) {
             binding.apply {
                 imgNewsBanner.loadImage(data.urlToImage.orEmpty())
@@ -40,7 +38,7 @@ class NewsAdapter(private val onItemClickListener: (NewsArticle) -> Unit): Pagin
     companion object {
         private val newsDiffCallback = object : DiffUtil.ItemCallback<NewsArticle>(){
             override fun areItemsTheSame(oldItem: NewsArticle, newItem: NewsArticle): Boolean = oldItem.publishedAt == newItem.publishedAt
-            override fun areContentsTheSame(oldItem: NewsArticle, newItem: NewsArticle): Boolean = oldItem == newItem
+            override fun areContentsTheSame(oldItem: NewsArticle, newItem: NewsArticle): Boolean = oldItem.publishedAt == newItem.publishedAt
         }
     }
 }
